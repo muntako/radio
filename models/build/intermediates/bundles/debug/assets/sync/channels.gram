@@ -1,0 +1,5 @@
+#JSGF V1.0;
+
+grammar channels;
+
+public <channels> = (female | mustang);

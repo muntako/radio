@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <TextView
+            android:id="@+id/caption_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="perintah"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="kata yang harus diucapkan"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/text_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rectangle"
+            android:padding="20dp"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:layout_marginTop="30dp"
+            android:text="hasil"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rectangle"
+            android:maxLines="5"
+            android:padding="20dp"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/toggle_music"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/toogle_mute"
+                android:onClick="onClick"
+                android:textOff=""
+                android:textOn="" />
+
+            <Button
+                android:id="@+id/control_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:text="start" />
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="10dp"-->
+                <!--android:weightSum="2">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/add"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:clickable="true"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:text="kelebihan" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/decrese"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:clickable="true"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:text="kurang" />-->
+
+            <!--</TableRow>-->
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+
+    <!--<com.muntako.radio.decoration.RecognitionProgressView-->
+        <!--android:id="@+id/recognition_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"/>-->
+
+    <TextView
+        android:id="@+id/caption_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15sp"
+        android:typeface="sans" />
+
+    <RelativeLayout
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caption_text"
+        android:layout_above="@+id/controls_container"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="#0d000000"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:visibility="visible">
+
+        <fragment
+            android:id="@+id/now_playing_fragment"
+            class="com.muntako.radio.Fragment.NowPlayingFragment"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            tools:layout="@layout/fragment_media_controls" />
+    </RelativeLayout>
+
+</RelativeLayout>

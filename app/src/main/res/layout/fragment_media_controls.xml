@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/media_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        tools:ignore="Overdraw">
+
+        <com.muntako.radio.decoration.LayoutSquare
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center_vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/card_margin"
+                android:elevation="3dp"
+                card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                <ImageView
+                    android:id="@+id/image_row_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_default" />
+            </android.support.v7.widget.CardView>
+        </com.muntako.radio.decoration.LayoutSquare>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/media_player_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:paddingLeft="8dp">
+
+                <TextView
+                    android:id="@+id/media_player_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/media_player_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/media_player_title"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/buffering_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/media_player_title"
+                    android:layout_marginTop="4dp"
+                    android:text="buffering"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <ToggleButton
+                android:id="@+id/play_pause_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/playpause"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textOff=""
+                android:textOn=""
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_marginTop="3dp"
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

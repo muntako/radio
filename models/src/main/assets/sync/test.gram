@@ -1,0 +1,4 @@
+#JSGF V1.0;
+
+grammar test;
+public <nasty> = ((cat* | dog* | mouse*)+)+;

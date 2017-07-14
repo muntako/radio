@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<com.muntako.radio.decoration.IconPreferenceScreen-->
+        <!--android:title="App"-->
+        <!--android:key="app"-->
+        <!--/>-->
+    <PreferenceScreen
+        android:key="app"
+        android:title="App">
+        <PreferenceCategory android:title="@string/playback">
+            <CheckBoxPreference
+                android:key="autoplay"
+                android:title="@string/playback_title"></CheckBoxPreference>
+        </PreferenceCategory>
+        <PreferenceCategory android:key="@string/other">
+
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <!--<PreferenceScreen-->
+        <!--android:fragment="com.muntako.radio.Fragment.UserFragment"-->
+        <!--android:key="account"-->
+        <!--android:title="Account">-->
+        <!--&lt;!&ndash;<extra&ndash;&gt;-->
+            <!--&lt;!&ndash;android:name="openuser"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:value="somePref"/>&ndash;&gt;-->
+    <!--</PreferenceScreen>-->
+
+    <PreferenceScreen
+        android:key="notification"
+        android:title="Notification">
+        <PreferenceCategory android:title="@string/playback">
+            <CheckBoxPreference
+                android:key="autoplay"
+                android:title="@string/playback_title"></CheckBoxPreference>
+        </PreferenceCategory>
+        <PreferenceCategory android:key="@string/other">
+            <!--<EditTextPreference-->
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="help"
+        android:title="Help">
+        //open help page
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="rate"
+        android:title="Rate this App">
+        //open rate
+    </PreferenceScreen>
+
+
+    <PreferenceScreen
+        android:key="about"
+        android:title="About">
+        //open about page
+    </PreferenceScreen>
+
+
+</PreferenceScreen>

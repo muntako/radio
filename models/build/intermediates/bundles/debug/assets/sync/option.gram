@@ -1,0 +1,7 @@
+#JSGF V1.0;
+
+grammar option;
+
+<select> = yes | no ;
+
+public <option> = <select>+;
